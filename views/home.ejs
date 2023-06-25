@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<br>
+<p><%= content %></p>
+<hr>
+<h2>POSTS</h2>
+<% for(let i=0;i<posts.length;i++){ %>
+    //truncating the string using substring method
+    
+    <h3> <%= posts[i].title %></h3>
+    <p> <%= posts[i].data.substring(1,100) + "...." %> </p>
+    <a href="/posts/<%=posts[i].title%> ">read more</a> 
+    </br>
+
+<% } %>
+
+<%- include("partials/footer"); -%>
